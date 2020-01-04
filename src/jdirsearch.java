@@ -93,11 +93,11 @@ public class jdirsearch {
 			public void itemStateChanged(ItemEvent e){
 				if(e.getStateChange() == ItemEvent.SELECTED){
 					proxy_host_field.setEnabled(false);
-                    proxy_port_field.setEnabled(false);
-                }else if(e.getStateChange() == ItemEvent.DESELECTED){
+                                        proxy_port_field.setEnabled(false);
+				}else if(e.getStateChange() == ItemEvent.DESELECTED){
 					proxy_host_field.setEnabled(true);
-                    proxy_port_field.setEnabled(true);
-                }
+					proxy_port_field.setEnabled(true);
+				}
 			}
 		});
 		ui.add(use_proxy);
@@ -251,8 +251,8 @@ public class jdirsearch {
 				String proxy_host = proxy_host_field.getText();
 				String proxy_port = proxy_port_field.getText();
 				Proxy proxy = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(proxy_host, Integer.parseInt(proxy_port)));
-			    req = (HttpURLConnection) url.openConnection(proxy);
-			    req.setInstanceFollowRedirects(false);
+				req = (HttpURLConnection) url.openConnection(proxy);
+				req.setInstanceFollowRedirects(false);
 				req.setRequestProperty("User-Agent", user_agent_field.getText());
 				req.setRequestMethod("GET");
 				code = Integer.toString(req.getResponseCode());
