@@ -264,7 +264,8 @@ public class jdirsearch {
 		}
 		return code;
 	}
-
+	
+	//next version...
 	public static boolean hasCloudflare(String url){
 		boolean hasCloudflare = false;
 
@@ -287,7 +288,8 @@ public class jdirsearch {
 		}
 		return hasCloudflare;
 	}
-
+	
+	//next version...
 	public static boolean hostIsUp(String host){
 		boolean hostIsUp = false;
 		try{
